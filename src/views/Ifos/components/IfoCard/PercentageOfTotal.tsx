@@ -1,6 +1,6 @@
 import React from 'react'
 import BigNumber from 'bignumber.js'
-import { Text } from '@pancakeswap-libs/uikit'
+import { Text } from '@realm-defi/uikit'
 import { UserInfo } from 'views/Ifos/hooks/useGetWalletIfoData'
 import useI18n from 'hooks/useI18n'
 

@@ -1,5 +1,5 @@
 {
-  "name": "pancake-frontend",
+  "name": "realm-frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -35,7 +35,7 @@
     "@binance-chain/bsc-connector": "^1.0.0",
     "@crowdin/crowdin-api-client": "^1.10.4",
     "@ethersproject/abi": "^5.0.7",
-    "@pancakeswap-libs/uikit": "^0.14.1",
+    "@realm-defi/uikit": "https://github.com/realm-defi/realm-uikit.git#09f0506a7bea74e16f20697afb3ad22502d502d1",
     "@reduxjs/toolkit": "^1.5.0",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",

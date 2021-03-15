@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ChevronDownIcon, useMatchBreakpoints } from '@pancakeswap-libs/uikit'
+import { ChevronDownIcon, useMatchBreakpoints } from '@realm-defi/uikit'
 
 interface DetailsProps {
   actionPanelToggled: boolean
