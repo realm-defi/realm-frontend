@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, BoxProps, Text } from '@realm-defi/uikit'
+import { Box, BoxProps, Text } from 'ui-kit/'
 
 type MetaLabel = BoxProps
 

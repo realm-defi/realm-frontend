@@ -1,5 +1,5 @@
 import styled, { DefaultTheme } from 'styled-components'
-import { CardHeader as UIKitCardHeader } from '@realm-defi/uikit'
+import { CardHeader as UIKitCardHeader } from 'ui-kit/'
 
 const getBackground = (theme: DefaultTheme) => {
   if (theme.isDark) {

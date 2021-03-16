@@ -1,5 +1,5 @@
 import React from 'react'
-import { BunnyPlaceholderIcon, Flex, Heading } from '@realm-defi/uikit'
+import { BunnyPlaceholderIcon, Flex, Heading } from 'ui-kit/'
 import useI18n from 'hooks/useI18n'
 
 interface ComingSoonProps {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { ThemeProvider as SCThemeProvider } from 'styled-components'
-import { light, dark } from '@realm-defi/uikit'
+import { light, dark } from 'ui-kit/'
 
 const CACHE_KEY = 'IS_DARK'
 

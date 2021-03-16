@@ -1,4 +1,4 @@
-import { MenuEntry } from '@realm-defi/uikit'
+import { MenuEntry } from 'ui-kit/'
 
 const config: MenuEntry[] = [
   {

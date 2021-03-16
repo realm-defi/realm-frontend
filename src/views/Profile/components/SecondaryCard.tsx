@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Text } from '@realm-defi/uikit'
+import { Text } from 'ui-kit/'
 
 const SecondaryCard = styled(Text)`
   border: 2px solid ${({ theme }) => theme.colors.tertiary};

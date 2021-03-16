@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ChevronDownIcon, ChevronUpIcon, Text } from '@realm-defi/uikit'
+import { ChevronDownIcon, ChevronUpIcon, Text } from 'ui-kit/'
 
 export interface ExpandableSectionButtonProps {
   onClick?: () => void

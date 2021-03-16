@@ -1,5 +1,5 @@
 import React from 'react'
-import { ModalProvider } from '@realm-defi/uikit'
+import { ModalProvider } from 'ui-kit/'
 import { Web3ReactProvider } from '@web3-react/core'
 import { Provider } from 'react-redux'
 import { getLibrary } from 'utils/web3React'

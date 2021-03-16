@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Card, CardBody } from '@realm-defi/uikit'
+import { Heading, Card, CardBody } from 'ui-kit/'
 import useI18n from 'hooks/useI18n'
 import HistoryChart from './HistoryChart'
 import Legend from './Legend'

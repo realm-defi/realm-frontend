@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Heading } from '@realm-defi/uikit'
+import { Heading } from 'ui-kit/'
 
 const Title = styled(Heading).attrs({ size: 'lg' })`
   color: ${({ theme }) => theme.colors.secondary};

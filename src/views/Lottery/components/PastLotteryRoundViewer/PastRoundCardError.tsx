@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from '@realm-defi/uikit'
+import { Text } from 'ui-kit/'
 
 interface PastRoundCardErrorProps {
   error: {

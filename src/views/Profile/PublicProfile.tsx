@@ -13,7 +13,7 @@ import {
   PrizeIcon,
   OpenNewIcon,
   BlockIcon,
-} from '@realm-defi/uikit'
+} from 'ui-kit/'
 import useI18n from 'hooks/useI18n'
 import { useProfile } from 'state/hooks'
 import Menu from './components/Menu'

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Text } from '@realm-defi/uikit'
+import { Text } from 'ui-kit/'
 import { Nft } from 'config/constants/types'
 
 interface CollectibleCardProps {

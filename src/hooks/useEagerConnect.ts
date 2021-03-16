@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { connectorLocalStorageKey, ConnectorNames } from '@realm-defi/uikit'
+import { connectorLocalStorageKey, ConnectorNames } from 'ui-kit/'
 import useAuth from 'hooks/useAuth'
 
 const useEagerConnect = () => {

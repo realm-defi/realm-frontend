@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from '@realm-defi/uikit'
+import { Text } from 'ui-kit/'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useTotalRewards } from 'hooks/useTickets'
 import useI18n from 'hooks/useI18n'

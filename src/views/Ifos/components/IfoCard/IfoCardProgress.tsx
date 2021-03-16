@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Progress } from '@realm-defi/uikit'
+import { Box, Progress } from 'ui-kit/'
 
 interface IfoCardProgressProps {
   progress: number

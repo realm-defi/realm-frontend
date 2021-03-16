@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ChevronDownIcon, Text } from '@realm-defi/uikit'
+import { ChevronDownIcon, Text } from 'ui-kit/'
 
 export interface DetailsButtonProps {
   onClick?: () => void

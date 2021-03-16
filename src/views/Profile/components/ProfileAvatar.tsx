@@ -1,5 +1,5 @@
 import React from 'react'
-import { NoProfileAvatarIcon } from '@realm-defi/uikit'
+import { NoProfileAvatarIcon } from 'ui-kit/'
 import { Profile } from 'state/types'
 import styled from 'styled-components'
 

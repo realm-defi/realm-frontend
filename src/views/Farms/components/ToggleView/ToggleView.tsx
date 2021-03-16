@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ListViewIcon, CardViewIcon, IconButton } from '@realm-defi/uikit'
+import { ListViewIcon, CardViewIcon, IconButton } from 'ui-kit/'
 import { ViewMode } from '../types'
 
 interface ToogleViewProps {

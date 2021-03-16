@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { HelpIcon, Text } from '@realm-defi/uikit'
+import { HelpIcon, Text } from 'ui-kit/'
 import useI18n from 'hooks/useI18n'
 
 import Tooltip from '../Tooltip/Tooltip'

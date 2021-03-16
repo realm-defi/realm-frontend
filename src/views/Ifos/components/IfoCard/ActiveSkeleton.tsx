@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Skeleton } from '@realm-defi/uikit'
+import { Box, Skeleton } from 'ui-kit/'
 
 const ActiveSkeleton = () => (
   <Box>

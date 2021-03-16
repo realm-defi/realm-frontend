@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import { Input } from '@realm-defi/uikit'
+import { Input } from 'ui-kit/'
 import styled from 'styled-components'
 
 const StyledInput = styled(Input)`

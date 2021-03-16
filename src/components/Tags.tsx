@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tag, VerifiedIcon, CommunityIcon, BinanceIcon } from '@realm-defi/uikit'
+import { Tag, VerifiedIcon, CommunityIcon, BinanceIcon } from 'ui-kit/'
 
 const CoreTag = (props) => (
   <Tag variant="secondary" outline startIcon={<VerifiedIcon />} {...props}>

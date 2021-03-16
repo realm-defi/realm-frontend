@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Flex, Heading, Text } from '@realm-defi/uikit'
+import { Flex, Heading, Text } from 'ui-kit/'
 
 interface HeadingProps {
   valueToDisplay?: string

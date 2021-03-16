@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Card, CardHeader, CardBody, CommunityIcon, Heading, PrizeIcon, Text } from '@realm-defi/uikit'
+import { Card, CardHeader, CardBody, CommunityIcon, Heading, PrizeIcon, Text } from 'ui-kit/'
 import { Team } from 'config/constants/types'
 import useI18n from 'hooks/useI18n'
 import ComingSoon from 'views/Profile/components/ComingSoon'

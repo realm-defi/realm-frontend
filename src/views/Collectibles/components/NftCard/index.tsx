@@ -11,7 +11,7 @@ import {
   Text,
   CardFooter,
   useModal,
-} from '@realm-defi/uikit'
+} from 'ui-kit/'
 import { useProfile } from 'state/hooks'
 import useI18n from 'hooks/useI18n'
 import { Nft } from 'config/constants/types'

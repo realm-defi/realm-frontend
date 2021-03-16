@@ -1,4 +1,4 @@
-import { Toast } from '@realm-defi/uikit'
+import { Toast } from 'ui-kit/'
 import BigNumber from 'bignumber.js'
 import { CampaignType, FarmConfig, Nft, PoolConfig, Team } from 'config/constants/types'
 

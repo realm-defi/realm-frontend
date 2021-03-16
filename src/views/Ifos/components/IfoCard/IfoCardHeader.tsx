@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, Text, Flex } from '@realm-defi/uikit'
+import { Heading, Text, Flex } from 'ui-kit/'
 
 interface IfoCardHeaderProps {
   ifoId: string

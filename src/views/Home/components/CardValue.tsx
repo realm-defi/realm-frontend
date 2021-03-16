@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { useCountUp } from 'react-countup'
-import { Text } from '@realm-defi/uikit'
+import { Text } from 'ui-kit/'
 
 export interface CardValueProps {
   value: number

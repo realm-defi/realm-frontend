@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from '@realm-defi/uikit'
+import { Text } from 'ui-kit/'
 import { useWeb3React } from '@web3-react/core'
 import useTokenBalance from 'hooks/useTokenBalance'
 import useI18n from 'hooks/useI18n'
