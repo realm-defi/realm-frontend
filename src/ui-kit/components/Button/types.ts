@@ -3,12 +3,17 @@ import { Link } from 'react-router-dom'
 import { LayoutProps, SpaceProps } from 'styled-system'
 
 export const scales = {
+  L: 'l',
   MD: 'md',
   SM: 'sm',
+  SMP: 'smp',
   XS: 'xs',
 } as const
 
 export const variants = {
+  NOBLES: 'nobles',
+  PEONS: 'peons',
+  EXILED: 'exiled',
   PRIMARY: 'primary',
   SECONDARY: 'secondary',
   TERTIARY: 'tertiary',

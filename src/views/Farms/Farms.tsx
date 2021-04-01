@@ -3,12 +3,12 @@ import { Route, useRouteMatch, useLocation } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import BigNumber from 'bignumber.js'
 import { useWeb3React } from '@web3-react/core'
-import { Image, Heading, RowType, Toggle, Text } from 'ui-kit/'
+import { Image, Heading, RowType, Toggle, Text, Flex } from 'ui-kit/'
 import styled from 'styled-components'
 import { BLOCKS_PER_YEAR, CAKE_PER_BLOCK, CAKE_POOL_PID } from 'config'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
-import { useFarms, usePriceBnbBusd, usePriceCakeBusd, usePriceEthBusd } from 'state/hooks'
+import { useFarms, usePriceBnbBusd, usePriceCakeBusd, usePriceEthBusd, useFarmUser } from 'state/hooks'
 import useRefresh from 'hooks/useRefresh'
 import { fetchFarmUserDataAsync } from 'state/actions'
 import { QuoteToken } from 'config/constants/types'
@@ -17,6 +17,7 @@ import { getBalanceNumber } from 'utils/formatBalance'
 import { orderBy } from 'lodash'
 
 import FarmCard, { FarmWithStakedValue } from './components/FarmCard/FarmCard'
+import HorizontalFarmCard from './components/HorizontalFarmCard/HorizontalFarmCard'
 import Table from './components/FarmTable/FarmTable'
 import FarmTabButtons from './components/FarmTabButtons'
 import SearchInput from './components/SearchInput'
@@ -24,6 +25,14 @@ import { RowProps } from './components/FarmTable/Row'
 import ToggleView from './components/ToggleView/ToggleView'
 import { DesktopColumnSchema, ViewMode } from './components/types'
 import Select, { OptionProps } from './components/Select/Select'
+
+const FarmPage = styled(Page)`
+  background-image: url('/images/realmBG.jpg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  padding: 32px 140px;
+  /* height: calc(100vh - 108px); */
+`
 
 const ControlContainer = styled.div`
   display: flex;
@@ -97,8 +106,11 @@ const StyledImage = styled(Image)`
 `
 
 const Header = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 32px 0px;
-  background: ${({ theme }) => theme.colors.gradients.bubblegum};
+  /* background: ${({ theme }) => theme.colors.gradients.bubblegum}; */
 
   padding-left: 16px;
   padding-right: 16px;
@@ -108,6 +120,8 @@ const Header = styled.div`
     padding-right: 24px;
   }
 `
+
+const FarmsSection = styled.div``
 
 const Farms: React.FC = () => {
   const { path } = useRouteMatch()
@@ -344,17 +358,18 @@ const Farms: React.FC = () => {
   }
 
   return (
-    <>
+    <FarmPage>
       <Header>
-        <Heading as="h1" size="xxl" color="secondary" mb="24px">
-          {TranslateString(999, 'Farms')}
+        <Heading as="h1" size="xxl" color="white" mb="24px">
+          {/* {TranslateString(999, 'Farms')} */}
+          Farm Opportunities
         </Heading>
-        <Heading size="lg" color="text">
-          {TranslateString(999, 'Stake Liquidity Pool (LP) tokens to earn.')}
+        <Heading size="lg" color="white">
+          Stake Liquidity Pool (LP) tokens to earn.
+          {/* {TranslateString(999, 'Stake Liquidity Pool (LP) tokens to earn.')} */}
         </Heading>
       </Header>
-      <Page>
-        <ControlContainer>
+      {/* <ControlContainer>
           <ViewControls>
             <ToggleView viewMode={viewMode} onToggle={(mode: ViewMode) => setViewMode(mode)} />
             <ToggleWrapper>
@@ -397,11 +412,24 @@ const Farms: React.FC = () => {
               <SearchInput onChange={handleChangeQuery} value={query} />
             </LabelWrapper>
           </FilterContainer>
-        </ControlContainer>
-        {renderContent()}
-        <StyledImage src="/images/3dpan.png" alt="Pancake illustration" width={120} height={103} />
-      </Page>
-    </>
+        </ControlContainer> */}
+      <FarmsSection>
+        <Flex flexDirection="column" alignItems="center">
+          {activeFarms.slice(0, 6).map((farm) => {
+            // console.log(farm)
+            return <HorizontalFarmCard key={farm.pid} farm={farm} account={account} />
+          })}
+          {/* <HorizontalFarmCard title="BDO" />
+          <HorizontalFarmCard title="SOUP" />
+          <HorizontalFarmCard title="MDO" />
+          <HorizontalFarmCard title="BNB" />
+          <HorizontalFarmCard title="BUSD" />
+          <HorizontalFarmCard title="PEONS-BNB LP Token" /> */}
+        </Flex>
+      </FarmsSection>
+      {/* {renderContent()} */}
+      {/* <StyledImage src="/images/3dpan.png" alt="Pancake illustration" width={120} height={103} /> */}
+    </FarmPage>
   )
 }
 

@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import throttle from 'lodash/throttle'
+import { Text } from 'ui-kit/'
 import Overlay from '../../components/Overlay/Overlay'
 import Flex from '../../components/Box/Flex'
 import { useMatchBreakpoints } from '../../hooks'
@@ -40,7 +41,7 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   display: flex;
   justify-content: space-between;
   background-color: white;
-  width: 100vw;
+  width: 100%;
 `
 
 const NavList = styled.ul`
@@ -155,9 +156,21 @@ const Menu: React.FC<NavProps> = ({
               </MenuItem>
             ))}
         </NavList>
-        <Flex>
+        <Flex
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="space-between"
+          marginRight="20px"
+          marginLeft="auto"
+          padding="10px 0"
+        >
+          <Flex flexDirection="column" alignItems="center">
+            <Text>Total Value Locked</Text>
+            {/* <Text color="pricePrimary">265</Text> */}
+            {children}
+          </Flex>
           <UserBlock account={account} login={login} logout={logout} />
-          {profile && <Avatar profile={profile} />}
+          {/* {profile && <Avatar profile={profile} />} */}
         </Flex>
       </StyledNav>
       {/* <BodyWrapper>

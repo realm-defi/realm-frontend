@@ -1,5 +1,5 @@
 import styled, { DefaultTheme } from 'styled-components'
-import { space, layout, variant } from 'styled-system'
+import { space, layout, variant as variantSelector } from 'styled-system'
 import { scaleVariants, styleVariants } from './theme'
 import { BaseButtonProps } from './types'
 
@@ -7,7 +7,7 @@ interface ThemedButtonProps extends BaseButtonProps {
   theme: DefaultTheme
 }
 
-const getDisabledStyles = ({ isLoading, theme }: ThemedButtonProps) => {
+const getDisabledStyles = ({ isLoading, theme, variant }: ThemedButtonProps) => {
   if (isLoading === true) {
     return `
       &:disabled,
@@ -17,9 +17,20 @@ const getDisabledStyles = ({ isLoading, theme }: ThemedButtonProps) => {
     `
   }
 
+  if (['peons', 'nobles', 'exiled'].includes(variant)) {
+    return `
+    &:disabled,
+    &.button--disabled {
+      opacity: 0.65;
+      box-shadow: none;
+      cursor: not-allowed;
+    }
+    `
+  }
+
   return `
     &:disabled,
-    &.pancake-button--disabled {
+    &.button--disabled {
       background-color: ${theme.colors.backgroundDisabled};
       border-color: ${theme.colors.backgroundDisabled};
       box-shadow: none;
@@ -45,8 +56,8 @@ const getOpacity = ({ $isLoading = false }: TransientButtonProps) => {
 const StyledButton = styled.button<BaseButtonProps>`
   align-items: center;
   border: 0;
-  border-radius: 16px;
-  box-shadow: 0px -1px 0px 0px rgba(14, 14, 44, 0.4) inset;
+  border-radius: 8px;
+  /* box-shadow: 0px -1px 0px 0px rgba(14, 14, 44, 0.4) inset; */
   cursor: pointer;
   display: inline-flex;
   font-family: inherit;
@@ -59,20 +70,20 @@ const StyledButton = styled.button<BaseButtonProps>`
   outline: 0;
   transition: background-color 0.2s;
 
-  &:hover:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled):not(:active) {
+  &:hover:not(:disabled):not(.button--disabled):not(.button--disabled):not(:active) {
     opacity: 0.65;
   }
 
-  &:active:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled) {
+  &:active:not(:disabled):not(.button--disabled):not(.button--disabled) {
     opacity: 0.85;
   }
 
   ${getDisabledStyles}
-  ${variant({
+  ${variantSelector({
     prop: 'scale',
     variants: scaleVariants,
   })}
-  ${variant({
+  ${variantSelector({
     variants: styleVariants,
   })}
   ${layout}

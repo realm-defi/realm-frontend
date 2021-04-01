@@ -35,8 +35,12 @@ export const useFetchPublicData = () => {
   useEffect(() => {
     const web3 = getWeb3NoAccount()
     const interval = setInterval(async () => {
-      const blockNumber = await web3.eth.getBlockNumber()
-      dispatch(setBlock(blockNumber))
+      try {
+        const blockNumber = await web3.eth.getBlockNumber()
+        dispatch(setBlock(blockNumber))
+      } catch (e) {
+        console.log(e)
+      }
     }, 6000)
 
     return () => clearInterval(interval)

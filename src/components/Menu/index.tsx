@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { Menu as UikitMenu } from 'ui-kit/'
+import CardValue from 'views/Home/components/CardValue'
 import { useWeb3React } from '@web3-react/core'
 import { allLanguages } from 'config/localisation/languageCodes'
 import { LanguageContext } from 'contexts/Localisation/languageContext'
@@ -36,7 +37,9 @@ const Menu = (props) => {
         showPip: !profile?.username,
       }}
       {...props}
-    />
+    >
+      <CardValue value={265159022.99} decimals={2} prefix="$" fontSize="16px" color="pricePrimary" />
+    </UikitMenu>
   )
 }
 

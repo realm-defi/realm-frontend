@@ -49,8 +49,12 @@ export type Colors = {
   text: string
   textDisabled: string
   textSubtle: string
+  pricePrimary: string
+  priceSecondary: string
+  priceTertiary: string
   borderColor: string
   card: string
+  cardBackground: string
 
   // Gradients
   gradients: Gradients
